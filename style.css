@@ -1,0 +1,46 @@
+.header {
+	height:70px;
+	background-color: #000;
+	margin-bottom: 10px;
+}
+
+.wrapper {
+    width: 960px;
+
+    margin: 0 auto;
+    margin-top: -20px;
+}
+.validate-tips{
+	color:red;
+}
+
+#google_map{
+	height:170px;
+}
+#main_google_map{
+	height:200px;
+}
+#add_car{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+h1 {
+	font-size: 50px;
+	color: #fff;
+	font-family: Verdana, Arial;
+	padding:10px;
+}
+/* Marker Info Window */
+h1.marker-heading{color: #585858;margin: 0px;padding: 0px;font: 18px "Trebuchet MS", Arial;border-bottom: 1px dotted #D8D8D8;}
+div.marker-info-win {margin-right: -20px;}
+div.marker-info-win p{padding: 0px;margin: 10px 0px 10px 0;}
+div.marker-inner-win{padding: 5px;}
+button.save-marker, button.remove-marker{
+	border: none;
+	background: rgba(0, 0, 0, 0);
+	color: #00F;
+	padding: 0px;
+	text-decoration: underline;
+	margin-right: 10px;
+	cursor: pointer;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "car_dealer",
+  "version": "0.0.0",
+  "authors": [
+    "mimi0604 <mimi.bouyuklieva@gmail.com>"
+  ],
+  "description": "Car dealer application",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "handlebars": "~2.0.0",
+    "jquery-ui": "~1.11.2",
+    "jquery": "~2.1.1"
+  }
+}

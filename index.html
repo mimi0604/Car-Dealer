@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Car Dealer</title>
+
+
+</head>
+
+<body>
+ <div class="wrapper">
+   <div class="header">
+     <h1>Car Dealer</h1>
+   </div>
+ <div id="main_google_map">
+ </div>
+ <img src="" id="test" style="display:none"/>
+   	    <div id="add_car"><button type="button" id="create" class="btn btn-default btn-lg">Add Car</button></div>
+<table class="table table-botrdered table-hover">
+ 	<tr id="cars_header">
+ 	  <th>
+ 	  </th>
+ 	  <th>
+ 	    #
+ 	  </th>
+  	  <th>
+  	    Brand
+ 	  </th>
+ 	  <th>
+ 	    Model
+ 	  </th> 
+ 	  <th>
+ 	    Manufacture Date
+ 	  </th> 
+ 	  <th>
+ 	    Available
+ 	  </th> 
+ 	  <th>
+ 	    Registration Number
+ 	  </th> 
+ 	  <th> 
+ 	  </th>   
+  	  <th>
+
+ 	  </th> 	  	    
+ 	</tr>
+ 	<tbody id="car_records">
+ 		
+ 	</tbody>
+</table>
+
+
+ 
+<div id="dialog-form" title="Car Dealer" style="display: none">
+  <p class="validateTips">All form fields are required.</p>
+
+
+<form class="form-horizontal" role="form" id="form">
+<div class="form-group" style="display:none">
+    <label for="brand" class="col-sm-4 control-label">Id</label>
+
+    <div class="col-sm-8" id="update_id">
+      
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="brand" class="col-sm-4 control-label">Image</label>
+
+    <div class="col-sm-8">
+      If you do not add a new image on update, the old image will be kept.
+      <input type="file" class="form-control" id="image" placeholder="Image" accept="image/*" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="brand" class="col-sm-4 control-label">Brand</label>
+
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="brand" placeholder="Brand">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="model" class="col-sm-4 control-label">Model</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="model" placeholder="Model">
+    </div>
+  </div>
+ <div class="form-group">
+    <label for="date" class="col-sm-4 control-label">Manufacture Date</label>
+    <div class="col-sm-8">
+      <input type="date" class="form-control" id="date" placeholder="Date">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="registration_number" class="col-sm-4 control-label">Registration Number</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="registration_number" placeholder="Registration Number">
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="reg_num" class="col-sm-4 control-label">Map</label>
+    <div class="col-sm-8">Right click to set the car location.
+      <div id="google_map"></div>
+    </div>
+  </div>
+    <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-8">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="available" > Available
+        </label>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!-- Optional theme -->
+<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<link rel="stylesheet" href="./bower_components/jquery-ui/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDTvVG-C9PlG3EsHWNHTciU3TKRCYqFZys"></script>
+<script src="./bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./bower_components/handlebars/handlebars.js"></script>
+<script src="car_crud.js"></script>
+<script src="functions.js"></script>
+<script src="script.js"></script>
+<script id="car-template" type="text/x-handlebars-template">
+  <tr>
+
+ 	  <td id="curr_img">
+ 	    <img src="data:image/png;base64, {{img}}" width="200px;"/>
+ 	  </td>
+ 	  <td class="curr_id">
+ 	    {{id}}
+ 	  </td>
+  	  <td class="curr_brand">
+  	    {{brand}}
+ 	  </td>
+ 	  <td class="curr_model">
+ 	    {{model}}
+ 	  </td> 
+ 	  <td class="curr_manufacture_date">
+ 	    {{manufacture_date}}
+ 	  </td> 
+ 	  <td class="curr_availability">
+ 	    {{availability}}
+ 	  </td> 
+ 	  <td class="curr_registration_number">
+ 	    {{registration_number}}
+ 	  </td>  
+ 	  <td>
+ 	    <button type="button" id="update" class="btn btn-default btn-sm">Update</button>
+ 	  </td>
+ 	  <td>  
+ 	    <button type="button" id="delete" class="btn btn-default btn-sm">Delete</button>
+ 	  </td> 	    
+ 	</tr>
+</script>
+</div>
+</body>
+</html>
